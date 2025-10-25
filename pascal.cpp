@@ -7,7 +7,7 @@ int main(int argc, char const *argv[])
 {
     int power = 5;
     vector < vector<int> >pascal(power + 1,vector <int>());
-    cout << pascal.size() << endl;
+    cout << pascal.max_size() << endl;
     // for (int i = 0; i <= power; i++)
     // {
     //     for (int j = 0; j < i+1; j++)

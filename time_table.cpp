@@ -8,7 +8,7 @@ int main()
     int rows = 9;
     int cols = 10;
     vector < vector<int> > table(rows, vector<int>(cols));
-    cout << table.capacity() << endl;
+    cout << table[8].size() << endl;
     for (int i = 0; i < rows; i++)
     {
         for (int j = 0; j < cols; j++)

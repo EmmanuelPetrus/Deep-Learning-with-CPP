@@ -3,7 +3,7 @@
 #include <iomanip>
 using namespace std;
 
-vector< vector<double> > product(const vector< vector<double> > &A, const vector< vector<double> > &B, int& rowsA, int& colsA,int& rowsB, int& colsB );
+vector< vector<double> > product(const vector< vector<double> > &A, const vector< vector<double> > &B);
 void printVector(const vector< vector<double> >&result);
 vector < vector<double> > inputMatrix(vector < vector<double> > &A,int& rows,int& cols);
 
@@ -26,23 +26,29 @@ int main(int argc, char const *argv[])
     cout << "ColsB:";
     cin >> colsB;
     
-    if (colsA != rowsB)
-    {
-        cout << "Matrix not conformable for multiplication.";
-        return 1;
-    }
     
     matrixA = inputMatrix(matrixA,rowsA,colsA);
     matrixB = inputMatrix(matrixB,rowsB,colsB);
     
-    result = product(matrixA,matrixB,rowsA,colsA,rowsB,colsB);
+     if (matrixA[0].size() != matrixB.size())
+    {
+        cout << "Matrix not conformable for multiplication.";
+        return 1;
+    }
+
+    result = product(matrixA,matrixB);
     printVector(result);
     
 }
 
 
-vector< vector<double> > product(const vector< vector<double> > &A, const vector< vector<double> > &B, int& rowsA, int& colsA,int& rowsB, int& colsB )
+vector< vector<double> > product(const vector< vector<double> > &A, const vector< vector<double> > &B)
 {
+    int rowsA = A.size();
+    int rowsB = B.size();
+    int colsA = A[0].size();
+    int colsB = B[0].size();
+    
     vector < vector<double> >result(rowsA, vector<double>(colsA,0));
 
     for (int i = 0; i < rowsA; i++)
