@@ -53,3 +53,13 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# folders to ignore
+CMakeCache.txt
+CMakeFiles/
+
+# --- Build directories ---
+build/
+out/
+bin/
+_deps/

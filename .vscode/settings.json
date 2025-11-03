@@ -10,6 +10,8 @@
         "type_traits": "cpp",
         "utility": "cpp",
         "vector": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "dense": "cpp",
+        "core": "cpp"
     }
 }
