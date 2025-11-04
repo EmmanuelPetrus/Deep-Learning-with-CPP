@@ -12,6 +12,7 @@
         "vector": "cpp",
         "random": "cpp",
         "dense": "cpp",
-        "core": "cpp"
+        "core": "cpp",
+        "iostream": "cpp"
     }
 }
