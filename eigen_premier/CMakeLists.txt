@@ -23,7 +23,9 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(Eigen3)
 
-add_executable(${PROJECT_NAME} "${PROJECT_SOURCE_DIR}/src/main.cpp")
+# add_executable(${PROJECT_NAME} "${PROJECT_SOURCE_DIR}/src/main.cpp")
+# add_executable(${PROJECT_NAME} "${PROJECT_SOURCE_DIR}/src/random.cpp")
+add_executable(${PROJECT_NAME} "${PROJECT_SOURCE_DIR}/src/reverse.cpp")
 
 target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -pedantic)
 target_link_libraries(${PROJECT_NAME} Eigen3::Eigen)
