@@ -13,6 +13,7 @@
         "random": "cpp",
         "dense": "cpp",
         "core": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "*.inc": "cpp"
     }
 }
