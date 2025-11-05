@@ -6,12 +6,12 @@ int main()
 {
     Matrix3i A;
     Matrix3i B;
-    A << 1, 10, 4,
-         2, 9,  6,
-         3, 11, 7;
+    A << 1, 2, 3,
+         4, 5,  6,
+         7, 8, 9;
 
-    cout << A.colwise().reverse()<<endl<<endl;
-    cout << A.rowwise().reverse();
-
+    B = A.transpose().rowwise().reverse();
+    cout << B << endl;
+   
     return 0;
 }
